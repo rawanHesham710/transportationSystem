@@ -52,7 +52,6 @@
             label1.Size = new Size(148, 25);
             label1.TabIndex = 1;
             label1.Text = "Payment Method";
-            label1.Click += label1_Click;
             // 
             // textBox1
             // 
@@ -79,6 +78,7 @@
             Checkout_btn.TabIndex = 4;
             Checkout_btn.Text = "Checkout";
             Checkout_btn.UseVisualStyleBackColor = true;
+            Checkout_btn.Click += Checkout_btn_Click;
             // 
             // Checkout
             // 

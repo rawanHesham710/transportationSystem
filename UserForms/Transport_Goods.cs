@@ -26,12 +26,12 @@ namespace Transportation_App.Views
             string connectionString = "Server=DESKTOP-HLH7URN;Database=transportation;Trusted_Connection=True;Encrypt=False;";
             int rideId = -1;
 
-            // Get current time as startTime
             TimeSpan startTime = DateTime.Now.TimeOfDay;
-
-            // Let's assume endTime is 1 hour after startTime
             TimeSpan endTime = startTime.Add(new TimeSpan(1, 0, 0));
-
+            if (endTime.TotalHours >= 24)
+            {
+                endTime = endTime.Subtract(new TimeSpan(24, 0, 0));
+            }
             // First insert into ride and get the new rideId
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -90,6 +90,9 @@ namespace Transportation_App.Views
                     }
                 }
             }
+            Checkout PaymentForm = new Checkout("1","1");
+            PaymentForm.Show();
+            this.Close();
         }
 
     }
