@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1
+namespace WinFormsApp1
 {
     partial class userLoginForm
     {
@@ -70,6 +70,7 @@
             loginPassField.Name = "loginPassField";
             loginPassField.Size = new Size(436, 27);
             loginPassField.TabIndex = 3;
+            loginPassField.PasswordChar = '●';
             // 
             // loginEmailTxt
             // 
